@@ -18,7 +18,7 @@ export default function Navbar() {
         {user ? (
           <>
             <Link to={`/profile/${user._id}`}className="hover:text-pink-400">{user.name}</Link>
-            <button onClick={handleLogout} className="text-sm text-pink-400 hover:text-pink-400">Logout</button>
+            <button onClick={handleLogout} className="text-sm text-pink-800 hover:text-pink-400">Logout</button>
           </>
         ) : (
           <>

@@ -11,7 +11,7 @@ import CreatePostPage from './pages/CreatePostPage';
 function App() {
   return (
     <BrowserRouter>
-      <div className="bg-pink-950 min-h-screen text-pink-100">
+      <div className="bg-rose-50 min-h-screen text-pink-900">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

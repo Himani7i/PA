@@ -15,9 +15,8 @@ export default function Profile() {
   if (!userData) return <p>Loading...</p>;
 
   return (
-    <div className="max-w-xl mx-auto p-4 text-pink-100">
+    <div className="max-w-xl mx-auto p-4 text-pink-800">
       <h2 className="text-2xl font-bold mb-2">{userData.user.name}</h2>
-      <p className="text-pink-300 mb-4">{userData.user.bio}</p>
       <h3 className="text-xl font-semibold mb-2">Posts</h3>
       {userData.posts.map(post => <PostCard key={post._id} post={post} />)}
     </div>

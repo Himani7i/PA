@@ -15,7 +15,7 @@ export default function Login() {
     const res = await API.post('/auth/login', { email, password }, {
       withCredentials: true
     });
-    console.log('Login success:', res.data);
+    // console.log('Login success:', res.data);
     setUser(res.data.user);
     navigate('/');
   } catch (err) {

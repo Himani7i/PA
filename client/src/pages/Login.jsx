@@ -11,7 +11,7 @@ export default function Login() {
   const navigate = useNavigate();
 
   const handleLogin = async () => {
-    const res = await API.post('/auth/login', { email, password }, { withCredentials: true });
+    const res = await API.post('/auth/login', { email, password });
     setUser(res.data.user);
     navigate('/');
   };

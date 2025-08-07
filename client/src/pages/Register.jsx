@@ -21,7 +21,7 @@ export default function Register() {
       <h2 className="text-xl font-bold  text-red-500 mb-4">Register</h2>
       <input value={name} onChange={e => setName(e.target.value)} placeholder="Name" className="border border-pink-300 bg-pink-100 text-pink-900 p-2 w-full mb-2"/>
       <input value={email} onChange={e => setEmail(e.target.value)} placeholder="Email" className="border border-pink-300 bg-pink-100 text-pink-900 p-2 w-full mb-2"/>
-      <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Password" className="border border-pink-300 bg-pink-500 text-pink-900 p-2 w-full mb-2"/>
+      <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Password" className="border border-pink-300 bg-pink-100 text-pink-900 p-2 w-full mb-2"/>
       <button onClick={handleRegister} className="bg-green-600 text-white px-4 py-2 rounded">Register</button>
     </div>
   );

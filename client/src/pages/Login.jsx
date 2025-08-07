@@ -11,11 +11,17 @@ export default function Login() {
   const navigate = useNavigate();
 
   const handleLogin = async () => {
+    try {
     const res = await API.post('/auth/login', { email, password }, {
       withCredentials: true
     });
+    console.log('Login success:', res.data);
     setUser(res.data.user);
     navigate('/');
+  } catch (err) {
+    console.error('Login failed:', err.response?.data || err.message);
+    alert(err.response?.data?.error || 'Login failed');
+  }
   };
 
   return (

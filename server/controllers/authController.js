@@ -19,7 +19,7 @@ exports.register = async (req, res) => {
       secure: true,
     });
 
-    res.status(201).json({ user }); 
+    res.status(201).json({ user : { email: user.email, _id: user._id } }); 
   } catch (err) {
     res.status(400).json({ error: err.message });
   }

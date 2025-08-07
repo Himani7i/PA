@@ -22,19 +22,19 @@ const CreatePostPage = () => {
   };
 
   return (
-    <div className="max-w-xl mx-auto mt-6 p-4 bg-white shadow-xl rounded-xl">
-      <h2 className="text-xl font-bold mb-4">Create a Post</h2>
+    <div className="max-w-xl mx-auto mt-10 p-6 bg-pink-900 rounded-xl shadow-2xl border border-pink-700 text-pink-100">
+      <h2 className="text-2xl font-bold mb-4 text-pink-100">Create a Post</h2>
       <form onSubmit={handleSubmit}>
         <textarea
           value={content}
           onChange={(e) => setContent(e.target.value)}
           placeholder="What's on your mind?"
-          className="w-full p-3 border rounded-lg mb-4"
+          className="w-full p-3 bg-pink-800 text-pink-100 placeholder-pink-300 border border-pink-700 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-pink-400"
           rows="4"
         />
         <button
           type="submit"
-          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md shadow"
+          className="bg-pink-600 hover:bg-pink-500 text-white px-6 py-2 rounded-md shadow transition duration-200 ease-in-out"
         >
           Post
         </button>

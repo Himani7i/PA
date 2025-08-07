@@ -11,6 +11,7 @@ import CreatePostPage from './pages/CreatePostPage';
 function App() {
   return (
     <BrowserRouter>
+      <div className="bg-pink-950 min-h-screen text-pink-100">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -19,6 +20,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/create" element={<CreatePostPage />} />
       </Routes>
+      </div>
     </BrowserRouter>    
   );
 }

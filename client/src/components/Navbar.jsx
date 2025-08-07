@@ -12,7 +12,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="p-4 flex justify-between shadow bg-pink-900 sticky top-0 z-50 text-pink-100">
+    <nav className="p-4 flex justify-between shadow bg-rose-800 sticky top-0 z-50 text-pink-100">
       <Link to="/" className="text-xl font-bold text-pink-100 hover:text-pink-300">MiniLinkedIn</Link>
       <div className="flex items-center gap-4">
         {user ? (

@@ -6,8 +6,9 @@ exports.register = async (req, res) => {
   try {
     // console.log('Register req.body:', req.body);
     const { name, email, password } = req.body;
+    const trimmedEmail = email.trim();
     const hashedPassword = await bcrypt.hash(password, 10);
-    const user = await User.create({ name, email, password: hashedPassword });
+    const user = await User.create({ name, email: trimmedEmail, password: hashedPassword });
 
     const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, {
       expiresIn: '1d',
@@ -27,9 +28,14 @@ exports.register = async (req, res) => {
 
 exports.login = async (req, res) => {
   try {
-    const { email, password } = req.body;
+    const email = req.body.email.trim();
+    const password = req.body.password; 
     console.log('Login req.body:', req.body);
     const user = await User.findOne({ email });
+    console.log('Trying to log in with:', email);
+    console.log('Found user:', user);
+    console.log('Stored hash:', user?.password);
+
     if (!user || !(await bcrypt.compare(password, user.password))) {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
